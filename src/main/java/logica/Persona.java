@@ -1,5 +1,6 @@
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS) // con esto decimos que va a crear una TABLA por cada clase hija q tenga
-public class Persona {
+public class Persona implements Serializable {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
