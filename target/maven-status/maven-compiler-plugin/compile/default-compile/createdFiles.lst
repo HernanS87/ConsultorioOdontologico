@@ -9,6 +9,7 @@ persistencia\ResponsableJpaController.class
 persistencia\OdontologoJpaController.class
 logica\Turno_.class
 persistencia\exceptions\PreexistingEntityException.class
+persistencia\ControladoraPersistencia.class
 persistencia\exceptions\IllegalOrphanException.class
 persistencia\SecretarioJpaController.class
 logica\Odontologo.class
@@ -16,6 +17,7 @@ logica\Responsable_.class
 persistencia\HorarioJpaController.class
 logica\Paciente.class
 logica\Horario.class
+logica\Controladora.class
 logica\Usuario_.class
 logica\Persona_.class
 logica\Secretario.class
