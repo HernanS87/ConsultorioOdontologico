@@ -1,5 +1,6 @@
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\persistencia\OdontologoJpaController.java
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\logica\Turno.java
+C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\logica\Controladora.java
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\persistencia\TurnoJpaController.java
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\logica\Horario.java
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\persistencia\exceptions\IllegalOrphanException.java
@@ -16,4 +17,5 @@ C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\persistencia\SecretarioJpaController.java
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\persistencia\HorarioJpaController.java
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\logica\Usuario.java
+C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\persistencia\ControladoraPersistencia.java
 C:\Users\HERNI\Documents\NetBeansProjects\ConsultorioOdontologico\src\main\java\logica\Responsable.java
