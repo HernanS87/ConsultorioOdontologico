@@ -1,16 +1,34 @@
 package persistencia;
 
+import logica.Usuario;
+
 
 public class ControladoraPersistencia {
     
-     HorarioJpaController horaJPA = new HorarioJpaController();
-     OdontologoJpaController odontoJPA = new OdontologoJpaController();
-     PacienteJpaController pacJPA = new PacienteJpaController();
-     PersonaJpaController persJPA = new PersonaJpaController(); //a este lo vamos a sacar porque no queremos persistir persona
-     ResponsableJpaController resJPA = new ResponsableJpaController();
-     SecretarioJpaController secreJPA = new SecretarioJpaController();
-     TurnoJpaController turnJPA = new TurnoJpaController();
-     UsuarioJpaController usuJPA = new UsuarioJpaController();
+    HorarioJpaController horaJPA;
+    OdontologoJpaController odontoJPA;
+    PacienteJpaController pacJPA;
+    PersonaJpaController persJPA; //a este lo vamos a sacar porque no queremos persistir persona
+    ResponsableJpaController resJPA;
+    SecretarioJpaController secreJPA;
+    TurnoJpaController turnJPA;
+     UsuarioJpaController usuJPA;
+
+    public ControladoraPersistencia() {
+        
+        usuJPA = new UsuarioJpaController();
+        horaJPA = new HorarioJpaController();
+        odontoJPA = new OdontologoJpaController();
+        pacJPA = new PacienteJpaController();
+        persJPA = new PersonaJpaController();
+        resJPA = new ResponsableJpaController();
+        secreJPA = new SecretarioJpaController();
+        turnJPA = new TurnoJpaController();
+      
+    } 
      
+    public void crearUsuario(Usuario usu){
+        usuJPA.create(usu);
     
+    }
 }

@@ -20,6 +20,7 @@ logica\Horario.class
 logica\Controladora.class
 logica\Usuario_.class
 logica\Persona_.class
+servlets\SvUsuarios.class
 logica\Secretario.class
 logica\Horario_.class
 persistencia\PacienteJpaController.class

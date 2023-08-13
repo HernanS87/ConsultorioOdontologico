@@ -23,11 +23,11 @@ public class Turno implements Serializable {
     private String afeccion;
     
     @ManyToOne
-    @JoinColumn(name="id_turno") // esto así va a explotar
+    @JoinColumn(name="id_odonto") // debemos poner un nombre representativo de la foreing key
     private Odontologo odonto;
     
     @ManyToOne
-    @JoinColumn(name="id_turno2") // esto así va a explotar
+    @JoinColumn(name="id_pacien") 
     private Paciente pacien;
 
     public Turno() {
