@@ -1,3 +1,5 @@
+<%@page import="logica.Usuario"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="components/header.jsp" %>
 <%@include file="components/bodyBegins.jsp" %>
@@ -31,12 +33,17 @@
                                             <th>Rol</th> 
                                         </tr>
                                     </tfoot>
+                                    
+                                    <% List<Usuario> listaUsuarios = (List) request.getSession().getAttribute("listaUsu"); %>
+                                    
                                     <tbody>
+                                        <% for (Usuario usu: listaUsuarios) {%>
                                         <tr>
-                                            <td>1</td>
-                                            <td>administrador</td>
-                                            <td>admin</td>                                            
-                                        </tr>                                   
+                                            <td><%= usu.getId_usuario() %></td>
+                                            <td><%= usu.getNombreUsuario() %></td>
+                                            <td><%= usu.getRol() %></td>                                            
+                                        </tr> 
+                                        <% } %>
                                     </tbody>
                                 </table>
                             </div>

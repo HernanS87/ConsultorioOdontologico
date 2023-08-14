@@ -1,12 +1,16 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.Controladora;
+import logica.Usuario;
 
 
 @WebServlet(name = "SvUsuarios", urlPatterns = {"/SvUsuarios"})
@@ -24,7 +28,16 @@ public class SvUsuarios extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        List<Usuario> listaUsu = new ArrayList<Usuario>();
+        
+        listaUsu = control.getUsuarios();
+        
+        HttpSession misession = request.getSession();
+        misession.setAttribute("listaUsu", listaUsu);
+               
+        response.sendRedirect("verUsuarios.jsp");
+        
     }
 
   
@@ -36,9 +49,6 @@ public class SvUsuarios extends HttpServlet {
         String pass = request.getParameter("password");
         String rol = request.getParameter("rol");
         
-        System.out.println("nombre " + nombreUsu);
-        System.out.println("pass " + pass);
-        System.out.println("rol " + rol);
         
         control.crearUsuario(nombreUsu, pass, rol);
         
