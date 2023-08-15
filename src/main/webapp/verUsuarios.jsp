@@ -23,7 +23,8 @@
                                         <tr>
                                             <th>Id</th>
                                             <th>Nombre Usuario</th>
-                                            <th>Rol</th>                                            
+                                            <th>Rol</th>
+                                            <th style="width: 210px">Acción</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -31,6 +32,7 @@
                                             <th>Id</th>
                                             <th>Nombre Usuario</th>
                                             <th>Rol</th> 
+                                            <th style="width: 210px">Acción</th>
                                         </tr>
                                     </tfoot>
                                     
@@ -41,7 +43,23 @@
                                         <tr>
                                             <td><%= usu.getId_usuario() %></td>
                                             <td><%= usu.getNombreUsuario() %></td>
-                                            <td><%= usu.getRol() %></td>                                            
+                                            <td><%= usu.getRol() %></td>
+                                            
+                                            <<td style="display: flex; width: 230px">
+                                                <form name="eliminar" action="SvElimUsuarios" method="POST" class="m-1">
+                                                    <button type="submit" class="btn btn-danger btn-user btn-block">
+                                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                                    </button>
+                                                    <input type="hidden" name="id" value="<%= usu.getId_usuario() %>">
+                                                </form>
+                                                <form name="editar" action="SvEditUsuarios" method="POST" class="m-1">
+                                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                        <i class="fas fa-pencil-alt"></i> Editar
+                                                    </button>
+                                                    <input type="hidden" name="id" value="<%= usu.getId_usuario() %>">
+                                                </form>                                                                                              
+                                            </td>
+                                            
                                         </tr> 
                                         <% } %>
                                     </tbody>
