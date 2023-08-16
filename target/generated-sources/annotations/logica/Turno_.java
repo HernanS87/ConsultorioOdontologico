@@ -7,7 +7,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import logica.Odontologo;
 import logica.Paciente;
 
-@Generated(value="EclipseLink-2.7.12.v20230209-rNA", date="2023-08-16T14:04:04")
+@Generated(value="EclipseLink-2.7.12.v20230209-rNA", date="2023-08-16T14:27:41")
 @StaticMetamodel(Turno.class)
 public class Turno_ { 
 
