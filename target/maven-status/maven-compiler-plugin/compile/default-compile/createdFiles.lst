@@ -1,5 +1,6 @@
 logica\Odontologo_.class
 logica\Usuario.class
+servlets\SvEditUsuarios.class
 logica\Persona.class
 logica\Secretario_.class
 logica\Turno.class
