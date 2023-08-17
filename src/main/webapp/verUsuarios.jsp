@@ -45,7 +45,7 @@
                                             <td><%= usu.getNombreUsuario() %></td>
                                             <td><%= usu.getRol() %></td>
                                             
-                                            <<td style="display: flex; width: 230px">
+                                            <td style="display: flex; width: 230px">
                                                 <form name="eliminar" action="SvElimUsuarios" method="POST" class="m-1">
                                                     <button type="submit" class="btn btn-danger btn-user btn-block">
                                                         <i class="fas fa-trash-alt"></i> Eliminar

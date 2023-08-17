@@ -29,5 +29,9 @@ public class Controladora {
     public Usuario traerUsu(int id) {
         return controlPersis.traerUsu(id);
     }
+
+    public void editarUsu(Usuario usu) {
+        controlPersis.editarUsu(usu);
+    }
     
 }

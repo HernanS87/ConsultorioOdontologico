@@ -34,9 +34,9 @@ public class SvElimUsuarios extends HttpServlet {
         
         control.borrarUsu(id);
         
-        response.sendRedirect("verUsuarios.jsp"); 
+        response.sendRedirect("SvUsuarios"); 
 
-        // cuando lo redirecciono directamente no se actualiza porque esa funcionalidad la tiene SvUsuarios
+        // tengo que desarrollar una funcion para que cuando cargue la pagina actualice los datos y no dependa del servelet
         
     }
 

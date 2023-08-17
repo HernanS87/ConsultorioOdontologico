@@ -33,8 +33,6 @@ public class SvEditUsuarios extends HttpServlet {
         HttpSession misession = request.getSession();
         misession.setAttribute("usuEditar", usu);
         
-        System.out.println("El usuario es: " + usu.getNombreUsuario());
-        
         response.sendRedirect("editarUsuario.jsp");
     }
 
@@ -42,7 +40,20 @@ public class SvEditUsuarios extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        String nombreUsu = request.getParameter("nombreusu");
+        String pass = request.getParameter("password");
+        String rol = request.getParameter("rol");
+        
+        Usuario usu = (Usuario) request.getSession().getAttribute("usuEditar");
+        usu.setNombreUsuario(nombreUsu);
+        usu.setPassword(pass);
+        usu.setRol(rol);
+               
+        control.editarUsu(usu);
+        
+        response.sendRedirect("SvUsuarios");
+        
     }
 
 
