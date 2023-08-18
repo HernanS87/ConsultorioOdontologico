@@ -43,17 +43,17 @@
                                     </div>
                                     <form class="user" action="SvLogin" method="POST">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="mail" name="mail" aria-describedby="emailHelp"
-                                                placeholder="Mail">
+                                            <input  class="form-control form-control-user"
+                                                id="usuario" name="usuario"
+                                                placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                    id="password" name="password" placeholder="Contraseña">
                                         </div>
-                                        <a href="index.jsp" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
-                                        </a>
+                                        </button>
                                     </form>
 
                                 </div>
