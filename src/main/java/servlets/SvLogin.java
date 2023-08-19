@@ -24,7 +24,12 @@ public class SvLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+ 
+        
+        HttpSession misession = request.getSession(true);
+            misession.removeAttribute("usuario");
+        
+        response.sendRedirect("login.jsp");
     }
 
 
@@ -42,6 +47,7 @@ public class SvLogin extends HttpServlet {
             HttpSession misession = request.getSession(true);
             misession.setAttribute("usuario", usuario);
             response.sendRedirect("index.jsp");
+           
         } 
         else { 
             response.sendRedirect("loginError.jsp");
